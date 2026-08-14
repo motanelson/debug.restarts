@@ -74,5 +74,63 @@ namespace guirtf
             richTextBox1.Clear();
             
         }
+
+        private void boldToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String s = richTextBox1.Rtf + "";
+            int i = 0;
+            s = s.Trim();
+            i = s.LastIndexOf('}');
+            s = s.Substring(0, i);
+
+            s = s+ "\\b\\f1\\fs17 \\par} ";
+            
+            richTextBox1.Rtf = s;
+            richTextBox1.SelectionStart = s.Length - 2;
+        }
+
+        private void noBoldToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String s = richTextBox1.Rtf + "";
+            int i = 0;
+            s = s.Trim();
+            i = s.LastIndexOf('}');
+            s = s.Substring(0, i);
+
+            s=s+"\\b0\\f1\\fs17  \\par}";
+            
+            richTextBox1.Rtf = s;
+            richTextBox1.SelectionStart = s.Length-2;
+
+        }
+
+        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String s = richTextBox1.Rtf + "";
+            int i = 0;
+            s = s.Trim();
+            i = s.LastIndexOf('}');
+            s = s.Substring(0, i);
+
+            s = s + "\\f1\\fs22  \\par}";
+
+            richTextBox1.Rtf = s;
+            richTextBox1.SelectionStart = s.Length - 2;
+        }
+
+        private void font32ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String s = richTextBox1.Rtf + "";
+            int i = 0;
+            s = s.Trim();
+            i = s.LastIndexOf('}');
+            s = s.Substring(0, i);
+
+            s = s + "\\f1\\fs32  \\par}";
+
+            richTextBox1.Rtf = s;
+            richTextBox1.SelectionStart = s.Length - 2;
+
+        }
     }
 }
