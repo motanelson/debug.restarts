@@ -155,7 +155,7 @@ namespace guirtf
 
             richTextBox1.Rtf = s;
             richTextBox1.SelectionStart = s.Length - 2;
-            MessageBox.Show(richTextBox1.Rtf);
+            //MessageBox.Show(richTextBox1.Rtf);
         }
     }
 }
